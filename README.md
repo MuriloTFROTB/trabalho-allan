@@ -1,34 +1,130 @@
-# Guia de Estilização CSS: Margens, Padding e Bordas
+# Resumo: Margens, Padding e Bordas no CSS
 
-Este guia aborda os fundamentos do **Box Model** do CSS, focando em como controlar o espaço e os limites dos elementos.
+## Margens (Margin)
 
----
+As propriedades de **margem** do CSS são usadas para criar espaço ao
+redor dos elementos, fora de quaisquer bordas definidas.
 
-## 1. Margens CSS (`margin`)
-As propriedades de margem são usadas para criar espaço **ao redor** dos elementos, fora de quaisquer bordas definidas. Elas determinam a distância entre a borda de um elemento e os elementos vizinhos.
+As margens definem a distância entre a borda de um elemento e os
+elementos circundantes.
 
 ### Lados Individuais
-Você pode controlar cada lado de forma independente:
-* `margin-top`: Superior.
-* `margin-right`: Direita.
-* `margin-bottom`: Inferior.
-* `margin-left`: Esquerda.
 
-**Valores aceitos:**
-* **auto**: O navegador calcula a margem (usado para centralizar).
-* **comprimento**: Especifica em `px`, `pt`, `cm`, etc.
-* **%**: Porcentagem da largura do elemento pai.
-* **inherit**: Herda o valor do elemento pai.
+O CSS possui propriedades para especificar a margem de cada lado de um
+elemento:
 
-> **Dica:** Diferente do padding, as margens permitem **valores negativos**.
+-   `margin-top` -- define a margem superior
+-   `margin-right` -- define a margem direita
+-   `margin-bottom` -- define a margem inferior
+-   `margin-left` -- define a margem esquerda
 
-### Propriedade Abreviada (Shorthand)
-Para simplificar o código, use apenas `margin`. A ordem dos valores segue o sentido horário:
-1. Topo
-2. Direita
-3. Base
-4. Esquerda
+### Valores possíveis
 
-```css
-/* Topo: 25px, Direita: 50px, Base: 75px, Esquerda: 100px */
+-   `auto` -- o navegador calcula automaticamente a margem
+-   `length` -- especifica a margem em px, pt, cm, etc.
+-   `%` -- define a margem em porcentagem da largura do elemento pai
+-   `inherit` -- herda a margem do elemento pai
+
+⚠️ Valores negativos também são permitidos.
+
+### Propriedade Abreviada
+
+A propriedade `margin` permite definir todas as margens em uma única
+linha.
+
+``` css
 margin: 25px 50px 75px 100px;
+```
+
+Ordem dos valores:
+
+1.  Topo
+2.  Direita
+3.  Baixo
+4.  Esquerda
+
+### Centralização com `auto`
+
+``` css
+margin: auto;
+```
+
+Permite **centralizar horizontalmente** um elemento dentro do container.
+
+### Herança com `inherit`
+
+``` css
+margin-left: inherit;
+```
+
+A margem será herdada do elemento pai.
+
+------------------------------------------------------------------------
+
+# Padding (Preenchimento)
+
+As propriedades de **padding** definem o espaço **entre o conteúdo do
+elemento e sua borda**.
+
+### Lados Individuais
+
+-   `padding-top`
+-   `padding-right`
+-   `padding-bottom`
+-   `padding-left`
+
+### Valores possíveis
+
+-   `length` -- px, pt, cm, etc.
+-   `%` -- porcentagem da largura do elemento pai
+-   `inherit` -- herda do elemento pai
+
+⚠️ **Valores negativos não são permitidos.**
+
+### Propriedade Abreviada
+
+``` css
+padding: 25px 50px 75px 100px;
+```
+
+Ordem dos valores:
+
+1.  Topo
+2.  Direita
+3.  Baixo
+4.  Esquerda
+
+------------------------------------------------------------------------
+
+# Bordas (Border)
+
+As propriedades de **border** permitem definir:
+
+-   Estilo
+-   Largura
+-   Cor
+
+## Estilo de Borda
+
+A propriedade `border-style` define o tipo de borda.
+
+Valores possíveis:
+
+-   `dotted` -- borda pontilhada
+-   `dashed` -- borda tracejada
+-   `solid` -- borda sólida
+-   `double` -- borda dupla
+-   `groove` -- borda com ranhura 3D
+-   `ridge` -- borda texturizada 3D
+-   `inset` -- borda interna 3D
+-   `outset` -- borda externa 3D
+-   `none` -- sem borda
+-   `hidden` -- borda oculta
+
+A propriedade `border-style` pode ter **de 1 a 4 valores**, aplicados na
+ordem:
+
+1.  Topo
+2.  Direita
+3.  Baixo
+4.  Esquerda
