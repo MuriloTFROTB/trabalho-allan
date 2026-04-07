@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Box Model CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+            /* Aplicação de Borda */
+            border: 5px solid #3498db; 
+        }
+
+        .box {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+
+            /* 1. MARGIN: Espaço fora da borda (afasta do container) */
+            margin: 30px;
+
+            /* 2. BORDER: A linha em volta do elemento */
+            border: 10px groove #c0392b;
+
+            /* 3. PADDING: Espaço entre o texto e a borda (dentro) */
+            padding: 20px 50px;
+        }
+
+        .centralizado {
+            width: 200px;
+            background-color: #2ecc71;
+            /* Uso do MARGIN AUTO para centralizar horizontalmente */
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            border: 2px dashed #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demonstração CSS</h1>
+
+    <div class="container">
+        <div class="box">
+            Eu tenho margem, borda e padding!
+        </div>
+    </div>
+
+    <div class="centralizado">
+        Fui centralizado com <code>margin: auto</code>.
+    </div>
+
+</body>
+</html>
